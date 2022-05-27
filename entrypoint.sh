@@ -7,12 +7,12 @@ chmod 400 /root/.ssh/id_rsa
 
 echo '=================== Sync with mirror git ==================='
 
-pwd
+git config --global --add safe.directory $PWD
 
-# git version
-# git fetch --unshallow origin
-# git checkout master
-# git status
+git version
+git fetch --unshallow origin
+git checkout master
+git status
 
 # ls -lsa
 
