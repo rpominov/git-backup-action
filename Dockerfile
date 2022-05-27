@@ -19,10 +19,6 @@ ENV LANGUAGE en_US.UTF-8
 
 RUN apk add --no-cache git openssh-client 
 
-# \
-# libc6-compat \
-# libstdc++
-
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
