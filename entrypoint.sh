@@ -15,11 +15,11 @@ git config --global --add safe.directory $PWD
 git remote add backup ${REMOTE}
 git remote -v
 
-echo '=================== Fetch ============================='
+# echo '=================== Fetch ============================='
 
-git fetch --unshallow origin
-git checkout master
-git status
+# git fetch --unshallow origin
+# git checkout master
+# git status
 
 echo '=================== Push =============================='
 
