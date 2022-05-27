@@ -1,0 +1,5 @@
+name: "Repository backup"
+description: "Pushes the repository to a specified remote"
+runs:
+  using: "docker"
+  image: "Dockerfile"
