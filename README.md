@@ -1,4 +1,4 @@
-# Repository backup
+# Repository backup GitHub Action
 
 For my personal use ...
 
