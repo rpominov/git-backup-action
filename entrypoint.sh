@@ -23,4 +23,4 @@ git remote -v
 
 echo '=================== Push =============================='
 
-git push backup master -f
+git push backup master --all
