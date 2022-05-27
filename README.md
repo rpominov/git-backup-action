@@ -19,12 +19,13 @@ on:
     - master
 
 jobs:
-  git-repo-backup:
+  backup:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: git-repo-backup
-      uses: rpominov/git-backup-actions@master
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: rpominov/git-backup-actions@v1
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE: "git@example.com:username/repo.git"
