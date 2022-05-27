@@ -8,8 +8,8 @@ chmod 400 /root/.ssh/id_rsa
 echo '=================== Git config ========================'
 
 git config --global --add safe.directory $PWD
-git config --global user.name "${GITHUB_ACTOR}"
-git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+# git config --global user.name "${GITHUB_ACTOR}"
+# git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote add backup ${TARGET_GIT}
 git remote -v
 
@@ -22,4 +22,4 @@ git status
 echo '=================== Push =============================='
 
 git push backup master -f
-git remote remove backup
+# git remote remove backup
