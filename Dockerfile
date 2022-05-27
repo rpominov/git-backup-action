@@ -1,4 +1,4 @@
-  
+
 FROM alpine:latest
 
 LABEL "com.github.actions.name"="Git repo backup Action"
@@ -6,9 +6,9 @@ LABEL "com.github.actions.description"="Backup your git repo into another one"
 LABEL "com.github.actions.icon"="home"
 LABEL "com.github.actions.color"="red"
 
-LABEL "repository"="https://github.com/jenkins-zh/git-backup-actions"
-LABEL "homepage"="https://github.com/jjenkins-zh/git-backup-actions"
-LABEL "maintainer"="Rick <rick@jenkins-zh.cn>"
+LABEL "repository"="https://github.com/rpominov/git-backup-actions"
+LABEL "homepage"="https://github.com/rpominov/git-backup-actions"
+LABEL "maintainer"="Roman <rpominov@gmail.com>"
 
 LABEL "Name"="Git repo backup Action"
 LABEL "Version"="0.0.1"

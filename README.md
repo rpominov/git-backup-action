@@ -1,23 +1,14 @@
-# Git repo backup Action
+# Repo backup Action
 
-GitHub Action for backup your git repository.
+For my personal use ...
 
-## Supported Git Provider
+## SSH key
 
-* [gitee](https://gitee.com)
-* [CodeChina](https://codechina.csdn.net/)
+1. Generate a key `ssh-keygen -t rsa -f git-backup -q -N ""`
+2. Add public key to where your backup will go
+3. Put privite key into `GIT_DEPLOY_KEY` secret of the repository you want to backup
 
-## Create Deploy Key
-
-1. Generate deploy key `ssh-keygen -t rsa -f git-backup -q -N ""`
-2. Then go to "Settings > Deploy Keys" of the target repository
-3. Add your public key within "Allow write access" option.
-4. Copy your private deploy key to `GIT_DEPLOY_KEY` secret in your source git repository of "Settings > Secrets"
-
-## Environment Variables
-
-- `GIT_DEPLOY_KEY` - *Required* your deploy key which has **Write access**
-- `TARGET_GIT` : **required**, your backup git repository (please use ssh or git protocol)
+## Example config
 
 ```
 name: Backup Git Repository
@@ -33,8 +24,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: git-repo-backup
-      uses: jenkins-zh/git-backup-actions@v0.0.1
+      uses: rpominov/git-backup-actions@master
       env:
         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
-        TARGET_GIT: "git@gitee.com:surenpi/surenpi.git"
+        TARGET_GIT: "git@example.com:username/repo.git"
 ```

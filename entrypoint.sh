@@ -9,10 +9,11 @@ echo '=================== Sync with mirror git ==================='
 
 echo ${TARGET_GIT}
 
-# git version
-# git fetch --unshallow origin
-# git checkout master
-# git status
+git version
+git fetch --unshallow origin
+git checkout master
+git status
+
 # git remote add backup ${TARGET_GIT}
 # git remote -vv
 # git config --global --add safe.directory /github/workspace
