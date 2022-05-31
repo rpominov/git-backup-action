@@ -9,7 +9,7 @@ set -e
 # echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_rsa
 # chmod 400 /root/.ssh/id_rsa
 
-
+git config --global --add safe.directory $PWD
 echo "${SSH_PRIVATE_KEY}" > /tmp_id_rsa
 GIT_SSH_COMMAND='ssh -o "StrictHostKeyChecking=no" -i /tmp_id_rsa' git push --repo="${REMOTE}" HEAD
 
