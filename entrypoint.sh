@@ -11,7 +11,7 @@ set -e
 
 git config --global --add safe.directory $PWD
 echo "${SSH_PRIVATE_KEY}" > /tmp_id_rsa
-GIT_SSH_COMMAND='ssh -o "StrictHostKeyChecking=no" -i /tmp_id_rsa' git push --repo="${REMOTE}" HEAD
+GIT_SSH_COMMAND='ssh -o "StrictHostKeyChecking=no" -i /tmp_id_rsa' git push --repo="${REMOTE}"
 
 # FIXME: if push fails, this file remains, which might be a security concern?
 rm /tmp_id_rsa
