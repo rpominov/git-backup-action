@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    - uses: rpominov/git-backup-action@v1
+    - uses: rpominov/git-backup-action@v2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE: "git@example.com:username/repo.git"
